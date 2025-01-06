@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Learning Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="Academic Space.jpg" alt="Academic Space Logo">
+            <div class="logotext">Academic Space</div>
+        </div>
+        <ul>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#courses">Courses</a></li>  
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h1 class="section-title">Learn for the Better Future</h1>
+        <h3 class="section-tag">Develop your skills with our courses</h3>
+
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <input type="text" id="course-search" placeholder="Search for a course...">
+            <button onclick="searchCourses()">Search</button>
+        </div>
+
+        <div class="courses-grid">
+            <!-- Courses will be dynamically loaded here -->
+        </div>
+    </section>
+
+    <section id="course-content" class="hidden">
+        <button class="back-button">← Back</button>
+        <h2 id="course-title" class="section-title"></h2>
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <span class="progress-text">0% Complete</span>
+        </div>
+        <div class="content-list"></div>
+        <button id="take-test" class="hidden">Take Test</button>
+    </section>
+
+    <section id="test-section" class="hidden">
+        <button class="back-button">← Back to Course</button>
+        <h2 class="section-title">Course Test</h2>
+        <div id="quiz-container"></div>
+        <button id="submit-test">Submit Test</button>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="company-info">
+                <h3>Academic Space</h3>
+                <p>Empowering minds through quality education</p>
+            </div>
+            <div class="contact">
+                <h3>Contact Us</h3>
+                <p>Email: sekharchinta160@gmail.com</p>
+                <p>Phone: (+91) 8074082576</p>
+            </div>
+            <div class="social">
+                <h3>Follow Us</h3>
+                <a href="#">AcademicLearners</a>
+                <a href="#">Academic527</a>
+                <a href="#">Academic Space</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Academic Space. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="courses.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

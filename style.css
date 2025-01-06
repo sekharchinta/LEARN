@@ -1,0 +1,332 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #f5f7fa;
+    color: #2d3436;
+}
+
+/* Navigation */
+nav {
+    background: linear-gradient(135deg, #3e61ae, #a363d9);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    height: 100px;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo img {
+    height: 60px;
+    border-radius: 30%;
+    margin-top: 5px;
+    margin-left: 30px;
+}
+.logotext {
+    font-size:1rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: rgba(255,255,255,0.2);
+    transform: translateY(-2px);
+}
+
+/* Main content */
+section {
+    padding: 2rem;
+    margin-top: 120px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #2d3436;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-family: Arial,Helvetica, sans-serif;
+    background: linear-gradient(to right, #2878ba, #2763b1,#7b3fad, #e344ee);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip:text;
+}
+
+.section-tag {
+    font-size: 1rem;
+    color: #183e97;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+/* Search Bar Styling */
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.search-bar input[type="text"] {
+    width: 60%;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border: 2px solid #6c5ce7;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.search-bar input[type="text"]:focus {
+    border-color: #a363d9;
+}
+
+.search-bar button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    background-color: #6c5ce7;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #a363d9;
+}
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.course-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.course-card h3 {
+    color: #6c5ce7;
+    margin-bottom: 1rem;
+}
+
+.course-card p {
+    color: #636e72;
+}
+
+/* Back button */
+.back-button {
+    background: #2563dd;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.back-button:hover {
+    background: #155f93;
+    transform: translateX(-2px);
+}
+
+/* Progress bar */
+.progress-container {
+    margin: 2rem 0;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background: #eee;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(135deg, #6c5ce7, #a363d9);
+    transition: width 0.3s ease;
+}
+
+/* Content list */
+.content-list {
+    margin: 2rem 0;
+}
+
+button{
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    background-color: #6c5ce7;
+    color: white;
+}
+
+.content-item {
+    background: white;
+    padding: 2rem;
+    margin: 1rem 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+
+.content-description {
+    margin: 1rem 0;
+    color: #636e72;
+}
+
+.resource-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #6c5ce7;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.resource-link:hover {
+    text-decoration: underline;
+}
+
+/* Test section */
+.quiz-question {
+    background: white;
+    padding: 2rem;
+    margin: 1rem 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.quiz-options label {
+    display: block;
+    margin: 1rem 0;
+    padding: 1rem;
+    background: #f5f7fa;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #3d659d, #636e72);
+    color: rgb(255, 255, 255);
+    padding: 2rem 1rem;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    gap: 3rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Utility classes */
+.hidden {
+    display: none;
+}
+
+/* Responsive design */
+@media (max-width: 756px) {
+    nav {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    nav ul {
+        margin-top: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    section {
+        margin-top: 120px;
+        padding: 1rem;
+    }
+
+    .course-card {
+        margin: 0 1rem;
+    }
+}
+
+.module-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #ffffff;
+}
+
+.mark-complete-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    background-color: #6c5ce7;
+    color: white;
+}
+
+.mark-complete-btn.completed {
+    background-color: #00b894;
+}
